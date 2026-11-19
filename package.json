@@ -10,7 +10,9 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@bydey/tusk": "^1.0.0",
     "next": "16.4.6",
+    "postgres": "^4.1.1",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
