@@ -1,7 +1,14 @@
 import { sql } from "@/db";
+import { auth } from "@/lib/auth";
 import { Category, CreateUpdateCategory } from "@/lib/types/category";
 
-export async function GET() {
+export async function GET(request: Request) {
+  const session = await auth.api.getSession({
+    headers: request.headers,
+  });
+
+  console.log(session);
+
   const categories: Category[] = await sql`
         SELECT * FROM categories
         ORDER BY id;

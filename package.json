@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@bydey/tusk": "^1.0.0",
+    "better-auth": "^1.7.27",
     "next": "16.4.6",
+    "pg": "^8.23.1",
     "postgres": "^4.1.1",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -20,8 +22,10 @@
     "@biomejs/biome": "2.4.2",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "auth": "^1.7.27",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   },
