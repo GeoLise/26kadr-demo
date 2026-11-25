@@ -27,7 +27,10 @@ async function AdminContent({
     <div className="min-h-screen md:flex">
       <div className="bg-zinc-400 p-6 text-black md:shrink-0">
         <p className="mb-10 text-black text-3xl">Это админка</p>
-        <Link href={"/admin/categories"}>Категории</Link>
+        <nav className="flex gap-4 md:flex-col">
+          <Link href="/admin/categories">Категории</Link>
+          <Link href="/admin/books">Книги</Link>
+        </nav>
       </div>
       <div className="min-w-0 flex-1">{children}</div>
     </div>
