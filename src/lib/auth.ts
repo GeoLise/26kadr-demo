@@ -1,5 +1,6 @@
 import { betterAuth } from "better-auth";
 import { Pool } from "pg";
+import { createMainAdmin } from "./create-main-admin";
 
 export const auth = betterAuth({
   database: new Pool({
@@ -7,5 +8,14 @@ export const auth = betterAuth({
   }),
   emailAndPassword: {
     enabled: true,
+  },
+  user: {
+    additionalFields: {
+      role: {
+        type: "string",
+        defaultValue: "USER",
+        input: false,
+      },
+    },
   },
 });
